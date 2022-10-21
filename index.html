@@ -1,1 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/960x0.jpg");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+</style>
+</head>
+<body>
+
+
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">By: Ben Ussery</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">Mole Day<br>2022</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">happy mole day</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT MOLES</span></h5>
+    <p>A "Mole" is a unit of measurement based on Avagadro's number. One mole is equal to 6.02214 × 10^23 elementary particles.</p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>This project took me 45 minutes to make, so I made my calculations based on that time.</i></p>
+    </div>
+  </div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">CALCULATIONS</span></h5>
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="w3-col s6 tablink">Calculation 1</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s6 tablink">Calculation 2</div>
+      </a>
+    </div>
+
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Electricity</h5>
+      <p class="w3-text-grey">My PC has a 500w power supply, but averaged at around 150w during my work.</p><br>
+      <p class="w3-text-grey">1. 150 Watts × (3/4 hour) = <b>112.5 Watthours</b></p>
+      <p class="w3-text-grey">2. 112.5 Watthours × (3600 joules/watthour) = <b>405,000 Joules</b></p>
+      <p class="w3-text-grey">3. 405,000 Joules × (6.242 × 10^18 eV/Joule) = <b>2.528 × 10^24 Electron Volts</b></p><br>
+      <p class="w3-text-grey">Summary: In the 45 minutes spent working on this page, my PC used around the amount of energy equivalent to <b>2.528 × 10^24 electrons</b> or <b>4.2 moles of electrons</b> passing through a potential difference of one volt.</p>
+    </div>
+
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Keyboard Force</h5>
+      <p class="w3-text-grey">The switches in the keyboard I used to create this site, made of high-density polyethelene plastic, have an actuation force of <b>45 grams.</b> In total, <b>4573 key presses</b> were made while typing the HTML code for this site.</p><br>
+      <p class="w3-text-grey">1. 4573 keystrokes × 45 grams = <b>205,785 grams</b></p>
+      <p class="w3-text-grey">2. high-density polyethelene is around <b>~300,000 g/mol</b></p>
+      <p class="w3-text-grey">3. 205,785 g / 300,000 g/mol = <b>~0.68 moles</b></p><br>
+      <p class="w3-text-grey">The total amount of actuation force in grams used to press the keys was around 206 kg, or the same amount of mass that would be present in about <b>0.68 moles</b> of high-density polyethelene.<br>A single key with an actuation force of 206 kg would require a heavy blacksmith anvil to be placed upon it to actuate!</p>
+    </div>  
+  
+  </div>
+</div>
+
+
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
 
